@@ -1,0 +1,63 @@
+{
+  "name" : "zendgroup/zg-cms",
+  "description": "Zendgroup CMS",
+  "type": "project",
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "zg",
+    "cms",
+    "zendgroup",
+    "framework",
+    "mvc",
+    "zf"
+  ],
+  "homepage": "http://zendgroup.vn/",
+  "authors": [
+    {
+      "name": "Thuy Dinh Xuan",
+      "homepage": "http://thuydx.pro/"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "version" : "0.0.1",
+  "require" : {
+	"php": "^5.5 || ^7.0",
+    "zendframework/zendframework" : "~3.0.0",
+    "roave/security-advisories": "dev-master",
+    "zfcampus/zf-development-mode": "^3.0",
+    "zendframework/zend-expressive": "^1.0",
+    "zendframework/zend-expressive-helpers": "^2.0",
+    "zendframework/zend-expressive-fastroute": "^1.0",
+    "zendframework/zend-expressive-twigrenderer": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8",
+    "squizlabs/php_codesniffer": "^2.3",
+    "zendframework/zend-developer-tools": "^1.1.0",
+    "zendframework/zend-test": "^3.0.1",
+    "filp/whoops": "^1.1 || ^2.0"
+  },
+  "extra": [],
+    "scripts": {
+      "check": [
+        "@cs",
+        "@test"
+      ],
+      "cs-check": "phpcs",
+      "cs-fix": "phpcbf",
+      "development-disable": "zf-development-mode disable",
+      "development-enable": "zf-development-mode enable",
+      "development-status": "zf-development-mode status",
+      "post-create-project-cmd": [
+          "@development-enable"
+      ],
+      "test": "phpunit --colors=always",
+      "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+      "upload-coverage": "coveralls -v"
+    },
+  "repositories" : [ {
+    "type" : "composer",
+    "url" : "https://packagist.org/"
+  } ]
+}
