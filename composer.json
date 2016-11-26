@@ -2,7 +2,7 @@
   "name" : "zendgroup/zg-cms",
   "description": "Zendgroup CMS",
   "type": "project",
-  "license": "BSD-3-Clause",
+  "license": "MIT License",
   "keywords": [
     "zg",
     "cms",
